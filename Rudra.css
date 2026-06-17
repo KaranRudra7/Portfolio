@@ -59,7 +59,7 @@ section {
 }
 #menu-ico{
     font-size: 3.6rem;
-    color: var(--text-color);
+    color: var(--min-color);
     display: none;
 }
 .home{
@@ -70,7 +70,7 @@ section {
 
 .home-img{
     width: 50vw;
-   animation: floatimage 4s ease-in-out infinite;
+   /* animation: floatimage 4s ease-in-out infinite; */
 }
 
 .home-img img{
@@ -79,7 +79,7 @@ section {
      /* height: 20vw; */
      /* aspect-ratio: 1/1; */
     width: 90%;
-   hidden: auto;
+   /* hidden: auto; */
 }
 
 @keyframes floatimage{
@@ -92,9 +92,7 @@ section {
  100%{
     transform: translateY(0);
  }
-
 }
-
 .home-content h3{
     font-size: 3.2rem;
     font-weight: 700;
@@ -105,7 +103,6 @@ section {
 span{
     color: aqua;
 }
-
 .home-content h1{
     font-size: 5.6rem;
     font-weight: 700;
@@ -114,11 +111,9 @@ span{
 .home-content p {
    font-size: 1.6rem;
 }
-
-
 .btn{
     display: inline-block;
-    margin-top: 80px;
+    margin-top: 50px;
     padding: 1rem 2.8rem;
     background: var(--min-color);
     border-radius: 4rem;
@@ -132,7 +127,6 @@ span{
 .btn:hover{
     box-shadow: none;
 }
-
 strong{
     color: rgb(125, 89, 95);
 }
@@ -144,7 +138,6 @@ strong{
     gap: 7rem;
     background: var(--second-big-color);
 }
-
 .About-img{
     width: 70vw; 
 }
@@ -154,8 +147,6 @@ strong{
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--big-color);
 }
-
-
 .heading{
     font-size: 4.5rem;
 }
@@ -170,16 +161,13 @@ strong{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
-
 .headinh{
     font-size: 4.5rem;
     margin-bottom: 5rem;
 }
-
 .services h2{
 margin-bottom: 5rem;
 }
-
 .Services-container{
     display: flex;
     justify-content: center;
@@ -187,7 +175,6 @@ margin-bottom: 5rem;
     flex-wrap: wrap;
     gap: 2rem;
 }
-
 .Services-container .Services-box{
     flex: 1 1 22rem;
     background: var(--second-big-color);
@@ -197,12 +184,10 @@ margin-bottom: 5rem;
     border: 2px solid var(--big-color);
     transform: .3s ease;
 }
-
 .Services-container .Services-box:hover{
   border-color: var(--min-color);
     transform: scale(1.02);
 }
-
 .Services-box i{
  font-size: 7rem;   
  color: var(--min-color);
@@ -214,16 +199,12 @@ margin-bottom: 5rem;
     font-size: 1.6rem;
     margin: 0.5rem;
 }
-
-
 .container{
     
     width: 100%;
     background: blue;
 }
  /* projects */
-
-
 .pro-co{
     display: flex;
     justify-content: center;
@@ -231,7 +212,6 @@ margin-bottom: 5rem;
     flex-wrap: wrap;
     gap: 2rem;
 }
-
 .card{
 
     margin-top: 50px;
@@ -254,7 +234,6 @@ margin-bottom: 5rem;
 .top-icons .fa-github:hover {
     color: var(--min-color);
 }
-
 .fa-regular.fa-folder{
     color: var(--min-color);
     justify-content: space-between;
@@ -264,7 +243,7 @@ margin-bottom: 5rem;
 .fol{
     position: absolute;
      top: 30px;
-     right: 660%;
+     right: 650%;
 }
 .card:hover{
     transform: translateY(-10px);
@@ -388,10 +367,33 @@ margin-bottom: 5rem;
 
 @media (max-width: 768px) {
 
-    #menu-icon {
+    #menu-ico {
         display: block;
     }
 
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--big-color);
+        border-top: 1rem solid rgba(0,0,0,0.2);
+        box-shadow: 0  .5rem 1rem rgba(0,0,0,0.2);
+       display: flex;
+       display: none;
+       flex-direction: column;
+    }
+    .navbar.active {
+        display: block;
+    }
+    
+    .navbar a {
+        display: block;
+        margin:3rem 0;
+        font-size: 2rem;
+    }
+     
     .home {
         flex-direction: column;
     }
@@ -420,15 +422,43 @@ margin-bottom: 5rem;
         margin-top: 4rem;
     }
  .services h2{
-    max-resolution: 3rem;
+    margin-bottom: 3rem;
  }    
 
- .projects{
+ .projects h2{
     margin-bottom: 3rem;
  }
 
  .pro-co{
     grid-template-columns: repeat(2, 1fr);
+ }
+
+}
+
+@media (max-width: 617px) {
+    .pro-co {
+        grid-template-columns: 1fr;
+    }
+
+  .home-img img {
+    width: 50vw;
+    margin-top: 8rem;
+  }
+
+ .About-img img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+
+}
+
+@media (max-width: 450px) {
+ html {
+    font-size: 50%;
+ }
+
+ .contact from .input-box input {
+    width: 100%;
  }
 
 }
